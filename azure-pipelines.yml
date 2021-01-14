@@ -6,4 +6,5 @@ jobs:
 #    - checkout: self
 #      fetchDepth: 1
     - task: RunMATLABCommand@0
-      command: 'results = runtests, assertSuccess(results);'
+      inputs:
+        command: 'results = runtests, assertSuccess(results);'
