@@ -3,10 +3,9 @@ jobs:
   pool:
     vmImage: 'Ubuntu-16.04'
   steps:
-#    - checkout: self
-#      fetchDepth: 1
-#    - task: InstallMATLAB@0
-    - task: MathWorks.matlab-azure-devops-extension-dev.InstallMATLAB.InstallMATLAB@0
+    - checkout: self
+      fetchDepth: 1
+    - task: InstallMATLAB@0
     - task: RunMATLABCommand@0
       inputs:
         command: 'results = runtests, assertSuccess(results);'
