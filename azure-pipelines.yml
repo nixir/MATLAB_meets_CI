@@ -3,8 +3,8 @@ jobs:
   pool:
     vmImage: 'Ubuntu-16.04'
   steps:
-    - checkout: self
-      fetchDepth: 1
+#    - checkout: self
+#      fetchDepth: 1
     - task: InstallMATLAB@0
     - task: RunMATLABCommand@0
       inputs:
